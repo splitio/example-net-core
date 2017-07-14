@@ -5,7 +5,7 @@ needed using the information obtained from Split UI.
 
 ### Get started
 
- * Log in to Split console, go to the "Admin Tab" and copy an API token of type "Browser"
+ * Log in to Split console, go to the "Admin Tab" and copy an API token of type "SDK"
  * Paste your API token, in `apiKey` variable in MyAppData.cs
  * [Create a Split](CREATESPLIT.md) and assign its name to the variable `featureName` in DefaultController.cs
  * Run your application, open your browser and you should see the treatment for the feature specified.
