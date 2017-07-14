@@ -6,9 +6,10 @@ needed using the information obtained from Split UI.
 ### Get started
 
  * Log in to Split console, go to the "Admin Tab" and copy an API token of type "Browser"
+ * Paste your API token, in `apiKey` variable in MyAppData.cs
  * [Create a Split](CREATESPLIT.md) and assign its name to the variable `featureName` in DefaultController.cs
  * Run your application, open your browser and you should see the treatment for the feature specified.
  
  You can also set a value for `featureName` and `userKey`, using url parameters as follows:
  
- `http://localhost:3954/Default?featureName=test-net&userKey=test-id`
+ [http://localhost:3954/Default?featureName=test-net&userKey=test-id](http://localhost:3954/Default?featureName=test-net&userKey=test-id)
