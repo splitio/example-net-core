@@ -5,7 +5,8 @@ namespace ExampleNetCore
 {
     public class MyAppData
     {
-        public ISplitClient Sdk { get; }
+        private ISplitClient _sdk;
+        public ISplitClient Sdk { get { return _sdk; } }
 
         public MyAppData()
         {            
@@ -19,7 +20,7 @@ namespace ExampleNetCore
             };
 
             var factory = new SplitFactory(apikey, configurations);
-            Sdk = factory.Client();
+            _sdk = factory.Client();
         }
     }
 }
