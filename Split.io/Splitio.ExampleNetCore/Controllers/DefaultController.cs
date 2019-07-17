@@ -5,11 +5,11 @@ namespace ExampleNetCore.Controllers
 {
     public class DefaultController : Controller
     {
-        SelfRefreshingClient sdk;
+        private readonly SelfRefreshingClient _sdk;
 
         public DefaultController(MyAppData data)
         {
-            sdk = data.Sdk as SelfRefreshingClient;
+            _sdk = data.Sdk as SelfRefreshingClient;
         }
 
         [HttpGet("")]
@@ -28,7 +28,7 @@ namespace ExampleNetCore.Controllers
                 userKey = "userId-1";
             }
 
-            var result = sdk.GetTreatment(userKey, featureName);
+            var result = _sdk.GetTreatment(userKey, featureName);
 
             var content =  string.Format(@"<html>
                                                 <body>
